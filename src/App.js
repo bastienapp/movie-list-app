@@ -8,6 +8,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/movies">
             <MovieList />
           </Route>
+          <Route exact path="/movies/:id" component={MovieDetails} />
           <Route exact path="/" />
           <Redirect to="/movies" />
         </Switch>
